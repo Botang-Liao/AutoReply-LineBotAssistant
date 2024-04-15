@@ -1,5 +1,5 @@
 from flask import Flask,request,abort
-from flaskr import app
+from flaskr import app, DATA_DIR 
 from linebot import LineBotApi,WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage,TextSendMessage
@@ -18,7 +18,7 @@ handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
 
 tools = NTTU_tools()
 tools.vectordb_manager.set_vector_db("NTTU_db")
-file_path = list_all_file_in_a_path.list_all_files(path='/home/n66104571/AutoReply-LineBotAssistant/flaskr/VDB_API/docs')
+file_path = list_all_file_in_a_path.list_all_files(path=DATA_DIR)
 tools.add_documents_to_vdb(file_path)
 
 

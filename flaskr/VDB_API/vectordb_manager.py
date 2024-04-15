@@ -7,6 +7,7 @@ from flaskr.VDB_API.utils.transfer_chinese import traditional_to_simplified
 from flaskr.VDB_API.utils.config import (COLLECTION_NAME, DB_PATH, DEVICE,
                                   HUGGINGFACE_MODEL_NAME)
 
+from flaskr import app
 
 class VectordbManager:
     print("你的裝置是：", DEVICE)

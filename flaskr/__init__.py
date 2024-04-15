@@ -6,6 +6,7 @@ import shutil
 BASE_DIR: str = os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir))
 APP_DIR: str = os.path.join(BASE_DIR, 'app')
 DATABASE_DIR: str = os.path.join(BASE_DIR, 'chroma_db')
+DATA_DIR: str = os.path.join(BASE_DIR, 'flaskr/VDB_API/docs')
 
 if not os.path.isdir(APP_DIR):
     os.mkdir(APP_DIR)
