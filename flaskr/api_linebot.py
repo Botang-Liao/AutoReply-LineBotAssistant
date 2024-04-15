@@ -4,10 +4,8 @@ from linebot import LineBotApi,WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage,TextSendMessage
 import configparser
-import sys
-sys.path.append('/home/n66104571/NLP/flaskr')
-from VDB_API.nttu_llm import NTTU_tools
-from VDB_API.utils import list_all_file_in_a_path
+from flaskr.VDB_API.nttu_llm import NTTU_tools
+from flaskr.VDB_API.utils import list_all_file_in_a_path
 from flaskr.LineBot.button_message import button_message
 from flaskr.LineBot.button_template import *
 
@@ -20,7 +18,7 @@ handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
 
 tools = NTTU_tools()
 tools.vectordb_manager.set_vector_db("NTTU_db")
-file_path = list_all_file_in_a_path.list_all_files()
+file_path = list_all_file_in_a_path.list_all_files(path='/home/n66104571/AutoReply-LineBotAssistant/flaskr/VDB_API/docs')
 tools.add_documents_to_vdb(file_path)
 
 

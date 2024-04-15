@@ -1,6 +1,6 @@
 import os
 
-def list_all_files(path="/home/n66104571/NLP/flaskr/VDB_API/docs"):
+def list_all_files(path="/home/n66104571/AutoReply-LineBotAssistant/flaskr/VDB_API/docs"):
     """
     列出指定路徑下的所有文件和資料夾
     """

@@ -2,10 +2,10 @@ from typing import Any, Dict, List, Union
 from langchain_community.llms.huggingface_pipeline import HuggingFacePipeline
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
-from VDB_API.utils import file_processor
-from VDB_API.utils.config import (CHAT_MODELS, DEVICE, PROMPT_TEMPLATE)
-from VDB_API.vectordb_manager import VectordbManager
-from VDB_API.utils.transfer_chinese import traditional_to_simplified, simplified_to_traditional
+from flaskr.VDB_API.utils import file_processor
+from flaskr.VDB_API.utils.config import (CHAT_MODELS, DEVICE, PROMPT_TEMPLATE)
+from flaskr.VDB_API.vectordb_manager import VectordbManager
+from flaskr.VDB_API.utils.transfer_chinese import traditional_to_simplified, simplified_to_traditional
 
 
 

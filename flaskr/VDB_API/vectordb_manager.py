@@ -1,11 +1,10 @@
 import chromadb
-import torch
 from langchain_community.embeddings.sentence_transformer import \
     SentenceTransformerEmbeddings
 from langchain_community.vectorstores import Chroma
 
-from VDB_API.utils.transfer_chinese import traditional_to_simplified
-from VDB_API.utils.config import (COLLECTION_NAME, DB_PATH, DEVICE,
+from flaskr.VDB_API.utils.transfer_chinese import traditional_to_simplified
+from flaskr.VDB_API.utils.config import (COLLECTION_NAME, DB_PATH, DEVICE,
                                   HUGGINGFACE_MODEL_NAME)
 
 

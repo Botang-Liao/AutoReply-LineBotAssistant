@@ -1,5 +1,5 @@
 from linebot.models import *
-from LineBot.button_template import ButtonTemplateInfo 
+from flaskr.LineBot.button_template import ButtonTemplateInfo 
 
 def button_message(info: ButtonTemplateInfo):
     message = TemplateSendMessage(
