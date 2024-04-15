@@ -2,7 +2,6 @@ from flask import Flask,request,abort
 from flaskr import app
 from linebot import LineBotApi,WebhookHandler
 from linebot.exceptions import InvalidSignatureError
-from qwen import qwen
 from linebot.models import MessageEvent, TextMessage,TextSendMessage
 import configparser
 import sys
@@ -11,7 +10,6 @@ from VDB_API.nttu_llm import NTTU_tools
 from VDB_API.utils import list_all_file_in_a_path
 from flaskr.LineBot.button_message import button_message
 from flaskr.LineBot.button_template import *
-import shutil
 
 #linebot基本資料
 config = configparser.ConfigParser()
@@ -20,7 +18,6 @@ config.read('config.ini')
 line_bot_api = LineBotApi(config.get('line-bot', 'channel_access_token'))
 handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
 
-#shutil.rmtree('/home/n66104571/NLP/chroma_db')
 tools = NTTU_tools()
 tools.vectordb_manager.set_vector_db("NTTU_db")
 file_path = list_all_file_in_a_path.list_all_files()

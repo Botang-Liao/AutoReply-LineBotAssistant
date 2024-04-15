@@ -1,0 +1,7 @@
+
+config.ini
+
+
+/docs
+__pycache__
+chroma_db
